@@ -1,0 +1,11 @@
+# Configuration Cloudflare Pages (optionnel)
+# Ce fichier est utilisé si vous utilisez Wrangler CLI pour le déploiement
+# Pour Cloudflare Pages via l'interface web, ce fichier n'est pas nécessaire
+
+name = "smartunityia-landing"
+compatibility_date = "2024-01-01"
+
+[env.production]
+routes = [
+  { pattern = "smartunityia.fr", zone_name = "smartunityia.fr" }
+]
