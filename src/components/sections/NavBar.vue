@@ -8,8 +8,32 @@
     ]"
   >
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-      <div class="flex items-center">
-        <img src="/logo.png" alt="SmartUnityIA Logo" class="h-12 w-auto object-contain hover:scale-110 transition-transform duration-300" />
+      <div class="flex items-center gap-2 font-bold text-xl tracking-tighter text-white">
+        <img src="/logo.png" alt="Logo" class="h-10 w-auto object-contain" />
+        <span class="flex flex-col leading-none ml-2">
+          <span class="font-bold text-xl tracking-tighter text-white">
+            SmartUnity<span class="text-cyan-500">IA</span>
+          </span>
+        </span>
+      </div>
+      <div class="hidden lg:flex flex-1 mx-8 overflow-hidden relative max-w-xl h-8 items-center mask-linear">
+        <div class="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-slate-950 to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-slate-950 to-transparent z-10"></div>
+        
+        <div class="flex animate-infinite-scroll hover:pause whitespace-nowrap">
+          <div class="flex items-center gap-6 mx-4">
+            <span v-for="(word, index) in techWords" :key="index" class="flex items-center gap-2 text-[10px] font-mono font-bold tracking-widest uppercase text-slate-500">
+              <span class="w-1 h-1 rounded-full bg-cyan-500/40"></span>
+              {{ word }}
+            </span>
+          </div>
+          <div class="flex items-center gap-6 mx-4">
+            <span v-for="(word, index) in techWords" :key="'copy-' + index" class="flex items-center gap-2 text-[10px] font-mono font-bold tracking-widest uppercase text-slate-500">
+              <span class="w-1 h-1 rounded-full bg-cyan-500/40"></span>
+              {{ word }}
+            </span>
+          </div>
+        </div>
       </div>
       <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
         <button
@@ -76,6 +100,12 @@ import CallButton from '@/components/ui/CallButton.vue'
 const { isScrolled } = useScroll()
 const mobileMenuOpen = ref(false)
 
+const techWords = [
+  'LOCAL-FIRST', 'SÉCURISÉ', 'SCALABLE', 'PERSONNALISABLE', 
+  'ECO-RESPONSABLE', 'RGPD', 'SOUVERAINETÉ', 'NO-LOG', 
+  'CHIFFREMENT MILITAIRE', 'OFFLINE-READY'
+]
+
 const scrollToSection = (id) => {
   mobileMenuOpen.value = false
   const element = document.getElementById(id)
@@ -93,3 +123,14 @@ defineExpose({
   openCal,
 })
 </script>
+
+<style scoped>
+.mask-linear {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.hover\:pause:hover {
+  animation-play-state: paused;
+}
+</style>
