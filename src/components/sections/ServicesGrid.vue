@@ -35,7 +35,7 @@
             </div>
             <h3 class="text-xl font-bold text-white mb-2">SaaS & Apps Custom</h3>
             <p class="text-slate-400 mb-4 text-sm">
-              Développement complet d'applications web/mobile modernes (React, Node, Postgres).
+              Développement complet d'interfaces web modernes et réactives (Vue.js, Tailwind CSS, Python).
             </p>
           </div>
         </FadeInSection>

@@ -11,7 +11,7 @@
             <Lock class="text-cyan-400 w-10 h-10 mb-6" />
             <h3 class="text-xl font-bold text-white mb-3">Zéro Fuite de Données</h3>
             <p class="text-slate-400 leading-relaxed">
-              Contrairement à ChatGPT, vos prompts et documents ne sont jamais envoyés sur des serveurs tiers. Tout reste sur votre machine ou votre cloud privé.
+              Zéro fuite vers les USA. Soit tout reste sur votre Mac (Mistral), soit nous utilisons des API souveraines suisses (Euria) ou françaises qui garantissent contractuellement la confidentialité.
             </p>
           </div>
         </FadeInSection>
@@ -27,9 +27,9 @@
         <FadeInSection delay="400ms">
           <div class="p-8 bg-slate-900 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition-colors h-full">
             <Zap class="text-yellow-400 w-10 h-10 mb-6" />
-            <h3 class="text-xl font-bold text-white mb-3">Latence & Coût</h3>
+            <h3 class="text-xl font-bold text-white mb-3">Performance & Éco-responsabilité</h3>
             <p class="text-slate-400 leading-relaxed">
-              Une fois le système installé, le coût par requête est drastiquement réduit. Plus besoin de payer à chaque token généré.
+              Réduisez votre empreinte carbone. Nos solutions locales et l'IA Euria sont conçues pour être frugales en énergie tout en restant ultra-performantes. Le 'Green IT' par défaut.
             </p>
           </div>
         </FadeInSection>

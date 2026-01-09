@@ -48,9 +48,9 @@
             <span>{{ feature }}</span>
           </li>
         </ul>
-        <Button :primary="recommended" class="w-full" @click="cta">
+        <CallButton class="w-full" @click="cta">
           {{ buttonText || 'Me contacter' }}
-        </Button>
+        </CallButton>
       </div>
     </div>
   </FadeInSection>
@@ -59,7 +59,7 @@
 <script setup>
 import { CheckCircle } from 'lucide-vue-next'
 import FadeInSection from '@/components/ui/FadeInSection.vue'
-import Button from '@/components/ui/Button.vue'
+import CallButton from '@/components/ui/CallButton.vue'
 
 defineProps({
   title: {

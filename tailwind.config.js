@@ -66,6 +66,7 @@ export default {
       animation: {
         'scroll': 'scroll 20s linear infinite',
         'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'text-gradient': 'text-gradient 8s linear infinite',
       },
       keyframes: {
         scroll: {
@@ -75,6 +76,10 @@ export default {
         fadeIn: {
           'from': { opacity: '0', transform: 'translateY(5px)' },
           'to': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'text-gradient': {
+          '0%': { backgroundPosition: '0% center' },
+          '100%': { backgroundPosition: '200% center' },
         },
       },
     },

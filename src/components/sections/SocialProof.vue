@@ -23,5 +23,5 @@
 </template>
 
 <script setup>
-const technologies = ['MISTRAL AI', 'PYTHON', 'DOCKER', 'LANGCHAIN', 'REACT', 'POSTGRESQL', 'OLLAMA', 'EURIA']
+const technologies = ['MISTRAL AI', 'PYTHON', 'DOCKER', 'LANGCHAIN', 'Vue.js', 'POSTGRESQL', 'OLLAMA', 'EURIA']
 </script>

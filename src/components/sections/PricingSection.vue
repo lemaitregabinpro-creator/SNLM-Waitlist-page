@@ -30,7 +30,7 @@
           disclaimer="*Acompte de 50% requis à la commande pour l'achat du Mac Mini. Le matériel vous appartient dès la livraison."
           :features="[
             'Inclus : Mac Mini M2/M4 (Serveur)',
-            'Développement React/Python sur mesure',
+            'Développement Vue.js/Python sur mesure',
             'Cession totale du Code Source (IP)',
             'Installation sur votre environnement',
             'Intégration Mistral / Llama 3',

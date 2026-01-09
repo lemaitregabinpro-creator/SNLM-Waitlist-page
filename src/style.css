@@ -12,15 +12,15 @@
     --color-background-tertiary: #45454F; /* slate-700 - Textes tertiaires */
     
     /* Gold - Couleur de marque */
-    --color-gold-300: #E5D5B0;            /* Or très clair - Reflets */
-    --color-gold-400: #D4C095;            /* Or clair - Texte mis en avant */
-    --color-gold-500: #C8B58D;            /* Or de base - Couleur de marque */
-    --color-gold-600: #A69268;            /* Or foncé - États :hover */
-    --color-gold-900: #423825;            /* Or très sombre - Fonds badges */
+    --color-gold-300: #e4c06d;            /* Or très clair - Reflets */
+    --color-gold-400: #dfb55c;            /* Or clair - Texte mis en avant */
+    --color-gold-500: #e0b455;            /* Or de base - Couleur de marque */
+    --color-gold-600: #e6b242;            /* Or foncé - États :hover */
+    --color-gold-900: #745a2b;            /* Or très sombre - Fonds badges */
     
     /* Textes */
     --color-text-light: #EAEAEF;          /* slate-50 - Texte principal */
-    --color-text-secondary: #9CA3AF;      /* slate-400/500 - Textes secondaires */
+    --color-text-secondary: #d8b43f;      /* slate-400/500 - Textes secondaires */
     
     /* Alias pour compatibilité */
     --color-primary-gold: var(--color-gold-500);
