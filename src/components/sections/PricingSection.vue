@@ -3,8 +3,8 @@
     <TerminalBackground />
     <div class="max-w-7xl mx-auto px-6 relative z-10">
       <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-white mb-4">Investissement & Offres</h2>
-        <p class="text-slate-400">La sécurité a un prix. L'insécurité en a un plus grand.</p>
+        <h2 class="text-3xl font-bold text-white mb-4">Solutions IA Souveraines & Agents IA Autonomes</h2>
+        <p class="text-slate-400">IA sécurisée Local First pour finance, santé, juridique. Chaque Mac Mini configuré = 100€ de don à la santé animale.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
         <PricingCard

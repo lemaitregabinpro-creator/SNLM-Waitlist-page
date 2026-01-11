@@ -9,7 +9,7 @@
   >
     <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
       <div class="flex items-center gap-2 font-bold text-xl tracking-tighter text-white">
-        <img src="/logo.png" alt="Logo" class="h-10 w-auto object-contain" />
+        <img :src="logoSrc" alt="SmartUnityIA - Logo ingénieur IA spécialisé solutions Local First et agents IA autonomes" class="h-10 w-auto object-contain" />
         <span class="flex flex-col leading-none ml-2">
           <span class="font-bold text-xl tracking-tighter text-white">
             SmartUnity<span class="text-cyan-500">IA</span>
@@ -99,6 +99,9 @@ import CallButton from '@/components/ui/CallButton.vue'
 
 const { isScrolled } = useScroll()
 const mobileMenuOpen = ref(false)
+
+// Référence à l'image dans /public - les fichiers dans /public sont servis à la racine
+const logoSrc = '/logo.png'
 
 const techWords = [
   'LOCAL-FIRST', 'SÉCURISÉ', 'SCALABLE', 'PERSONNALISABLE', 

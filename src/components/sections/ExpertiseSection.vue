@@ -2,16 +2,16 @@
   <section id="expertise" class="py-24 px-6 bg-slate-900/20">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-white">Pourquoi choisir le Local First ?</h2>
-        <p class="text-slate-400 mt-2">Ce n'est pas juste de la technique, c'est de la stratégie.</p>
+        <h2 class="text-3xl font-bold text-white">Agents IA Sécurisés & Solutions Local First</h2>
+        <p class="text-slate-400 mt-2">IA sécurisée pour finance, santé et juridique. Protection des données sensibles garantie.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <FadeInSection delay="0ms">
           <div class="p-8 bg-slate-900 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition-colors h-full">
             <Lock class="text-cyan-400 w-10 h-10 mb-6" />
-            <h3 class="text-xl font-bold text-white mb-3">Zéro Fuite de Données</h3>
+            <h3 class="text-xl font-bold text-white mb-3">IA Sécurisée & Protection Données Sensibles</h3>
             <p class="text-slate-400 leading-relaxed">
-              Zéro fuite vers les USA. Soit tout reste sur votre Mac (Mistral), soit nous utilisons des API souveraines suisses (Euria) ou françaises qui garantissent contractuellement la confidentialité.
+              Zéro fuite vers les USA. Soit tout reste sur votre Mac (Mistral), soit nous utilisons des <strong class="text-white">API françaises</strong> souveraines (Euria) qui garantissent contractuellement la <strong class="text-white">confidentialité</strong> et la <strong class="text-white">protection des données sensibles</strong> pour la finance, la santé et le juridique.
             </p>
           </div>
         </FadeInSection>

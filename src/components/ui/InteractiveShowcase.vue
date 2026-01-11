@@ -14,7 +14,7 @@
           <img
             :src="avatarUrl"
             class="w-full h-full rounded-full object-cover transition-transform duration-500 group-hover:scale-110"
-            alt="SmartUnity AI"
+            alt="Interface agent IA autonome - Solutions IA souveraines Local First pour finance, santé et juridique"
           />
           <div class="absolute bottom-1 right-1 w-3 h-3 bg-cyan-500 border-2 border-slate-950 rounded-full animate-pulse"></div>
         </div>

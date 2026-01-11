@@ -27,17 +27,16 @@
       </div>
 
       <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-8 leading-tight">
-        L'Intelligence Artificielle <br />
+        Ingénieur IA & Développeur IA <br />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 bg-[length:200%_auto] animate-text-gradient font-extrabold">
-          Sans Compromis.
+          Solutions Local First.
         </span>
       </h1>
 
       <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-        Studio d'ingénierie spécialisé en architectures 
-        <span class="text-white font-medium">Local First</span>. 
+        Studio d'ingénierie spécialisé en <span class="text-white font-medium">solutions IA souveraines</span> et <span class="text-white font-medium">agents IA autonomes</span> pour la finance, la santé et le juridique. 
         <br class="hidden md:block" />
-        Nous déployons vos IA sur vos machines. Vos données ne sortent plus.
+        <span class="text-white font-medium">IA sécurisée Local First</span> : vos données sensibles restent sur vos serveurs, avec <span class="text-white font-medium">API françaises</span> et protection maximale.
       </p>
 
       <div class="flex justify-center mt-10">
