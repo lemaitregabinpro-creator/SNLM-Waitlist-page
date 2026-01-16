@@ -1,0 +1,17 @@
+# Tâche : Configuration Automatique de Déploiement Netlify
+
+J'ai copié 2 fichiers de configuration à la racine du projet (`netlify.toml`, `vite.config.js`).
+Ton but est de préparer ce projet pour un déploiement immédiat sur Netlify ("Drop & Deploy").
+
+1. **Intégration de la configuration :**
+   - Vérifie si un `netlify.toml` existait déjà. Si oui, fusionne-le intelligemment avec le mien (priorité à ma règle `[[redirects]]` pour le SPA). Sinon, garde le mien tel quel.
+   - Si le projet utilise TypeScript (`vite.config.ts`), intègre la logique de mon `vite.config.js` (surtout `outDir: 'dist'`) dans le fichier TS existant et supprime le fichier `.js`.
+
+2. **Vérification du Build :**
+   - Analyse le `package.json`. Assure-toi que le script `"build"` existe (ex: `"build": "vite build"`).
+   - Vérifie que le framework (Vue/React) est bien détecté et compatible avec la config Vite.
+
+3. **Nettoyage :**
+   - Supprime les anciens fichiers de config d'autres hébergeurs s'ils traînent (ex: `wrangler.toml`, `vercel.json`) pour éviter la confusion.
+
+Confirme-moi quand le projet est prêt. Je devrais pouvoir juste glisser le dossier sur Netlify ou connecter le repo Git sans rien configurer.
