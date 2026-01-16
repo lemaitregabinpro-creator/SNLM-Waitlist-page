@@ -1,352 +1,117 @@
 export const faqData = [
-  // --- NOUVEAU : Cœur de l'offre (IA Locale & Modèles) ---
   {
-    id: 'modeles-ia-locaux',
-    slug: 'quels-modeles-ia-locaux',
+    id: 'pourquoi-smartbooklm',
+    slug: 'pourquoi-utiliser-smartbooklm',
     featured: true,
-    question: "Quels modèles d'IA installez-vous (Mistral, Llama, Qwen) ?",
-    shortAnswer: "Nous sélectionnons le meilleur de l'Open Source. Mistral (France) pour la rédaction, Qwen pour la logique/maths, et Llama 3 pour la polyvalence. Le tout orchestré via Ollama pour une fluidité totale.",
+    question: "Combien de temps gagnez-vous avec la suppression automatique du filigrane NotebookLM ?",
+    shortAnswer: "Supprimez le filigrane NotebookLM sur toutes les slides d'un diaporama en un clic. Plus besoin de retoucher chaque slide manuellement, économisez des heures de travail.",
     detailedAnswer: `
-      <p class="mb-4">Contrairement aux solutions fermées (comme ChatGPT), nous vous donnons accès à une <strong>bibliothèque de modèles de pointe</strong> (State of the Art), choisis spécifiquement pour vos besoins.</p>
+      <p class="mb-4">Retirer le filigrane NotebookLM manuellement sur chaque slide prend <strong>énormément de temps</strong>. Sur un diaporama de 20 slides, cela peut prendre jusqu'à <strong>30 minutes à 1 heure</strong> selon votre méthode.</p>
       
-      <h3 class="text-xl font-bold text-white mb-3 mt-6">L'Orchestration avec Ollama</h3>
-      <p class="mb-4">Nous utilisons <strong>Ollama</strong> comme moteur d'orchestration, ce qui nous permet de changer de "cerveau" instantanément selon la tâche :</p>
+      <h3 class="text-xl font-bold text-white mb-3 mt-6">Suppression automatique en un clic</h3>
+      <p class="mb-4">Avec SmartBookLM, la suppression du filigrane NotebookLM se fait <strong>automatiquement sur toutes les slides</strong> d'un coup :</p>
       <ul class="list-disc list-inside space-y-2 mb-4 text-slate-300">
-        <li><strong>Mistral / Mixtral (France)</strong> : Excellent pour la rédaction en français, le code et la synthèse.</li>
-        <li><strong>Qwen (Alibaba)</strong> : Actuellement imbattable sur les mathématiques, la logique complexe et le code.</li>
-        <li><strong>Llama 3 (Meta)</strong> : Le standard industriel, très polyvalent et robuste.</li>
+        <li><strong>Import de votre diaporama</strong> : Glissez votre fichier exporté depuis NotebookLM</li>
+        <li><strong>Détection automatique</strong> : SmartBookLM identifie le filigrane sur chaque slide</li>
+        <li><strong>Suppression en masse</strong> : Tous les filigranes sont retirés simultanément</li>
+        <li><strong>Export propre</strong> : Récupérez votre diaporama sans filigrane en quelques secondes</li>
       </ul>
 
-      <h3 class="text-xl font-bold text-white mb-3 mt-6">Pourquoi plusieurs modèles ?</h3>
-      <p class="mb-4">On n'utilise pas un marteau pour visser. SmartUnityIA configure votre Mac Mini pour router vos demandes vers le modèle le plus compétent : Qwen pour analyser vos Excel, Mistral pour rédiger vos emails.</p>
+      <p class="mb-4"><strong>Résultat</strong> : Ce qui prenait 30 minutes à 1 heure se fait maintenant en <strong>moins de 10 secondes</strong>. Un gain de temps considérable pour vos présentations professionnelles.</p>
+      
+      <p class="mb-4">Plus besoin d'ouvrir chaque slide dans un éditeur d'image, de sélectionner manuellement le filigrane, de le supprimer, puis de recommencer pour la slide suivante. SmartBookLM automatise tout le processus.</p>
     `,
-    keywords: ['Mistral', 'Qwen', 'Ollama', 'Llama 3', 'Modèles Open Source', 'IA Locale'],
-    seoTitle: 'Quels modèles IA locaux (Mistral, Qwen) ? | SmartUnityIA',
-    seoDescription: 'Découvrez les modèles IA installés sur votre Mac Mini : Mistral pour le français, Qwen pour la logique, orchestrés par Ollama. Performance locale maximale.',
-    slides: [
-      {
-        image: '/slides/modeles-ia/modeles-ia-1.jpg',
-        alt: 'Interface Ollama - Orchestration des modèles IA Mistral, Qwen et Llama 3'
-      },
-      {
-        image: '/slides/modeles-ia/modeles-ia-2.jpg',
-        alt: 'Modèle Mistral - Performance en rédaction française et génération de code'
-      },
-      {
-        image: '/slides/modeles-ia/modeles-ia-3.jpg',
-        alt: 'Modèle Qwen - Capacités en mathématiques et logique complexe'
-      },
-      {
-        image: '/slides/modeles-ia/modeles-ia-4.jpg',
-        alt: 'Modèle Llama 3 - Polyvalence et robustesse pour tâches générales'
-      },
-      {
-        image: '/slides/modeles-ia/modeles-ia-5.jpg',
-        alt: 'Comparaison des performances des modèles IA locaux sur Mac Mini'
-      },
-      {
-        image: '/slides/modeles-ia/modeles-ia-6.jpg',
-        alt: 'Configuration et installation des modèles IA sur infrastructure Local First'
-      }
-    ]
+    keywords: ['Suppression filigrane', 'NotebookLM', 'Gain de temps', 'Automatisation', 'Productivité'],
+    seoTitle: 'Suppression automatique filigrane NotebookLM | Gain de temps x100 | SmartBookLM',
+    seoDescription: 'Supprimez le filigrane NotebookLM sur toutes les slides d\'un diaporama en un clic. Économisez des heures de travail avec SmartBookLM.',
+    slides: []
   },
-
-  // --- NOUVEAU : Choix du Matériel ---
   {
-    id: 'choix-mac-mini',
-    slug: 'quel-mac-mini-choisir',
+    id: 'donnees-cloud',
+    slug: 'donnees-envoye-cloud',
     featured: true,
-    question: "Quel Mac Mini choisir pour mon entreprise ?",
-    shortAnswer: "Cela dépend de votre usage. Le M4 standard suffit pour l'administratif et les assistants personnels. Le M4 Pro est recommandé pour les développeurs et l'analyse de gros volumes de données.",
+    question: "Mes données sont-elles envoyées sur le cloud ?",
+    shortAnswer: "Non. Tout se passe sur votre machine (Local First). C'est notre garantie confidentialité. Vos fichiers ne quittent jamais votre ordinateur.",
     detailedAnswer: `
-      <p class="mb-4">Le <strong>Mac Mini</strong> est la machine idéale pour l'IA grâce à son architecture mémoire unifiée (CPU/GPU). Voici comment choisir votre configuration :</p>
+      <p class="mb-4">SmartBookLM fonctionne en <strong>mode Local First</strong>. Cela signifie que <strong>tous les traitements</strong> se font directement sur votre machine, sans aucune connexion internet requise.</p>
       
-      <h3 class="text-xl font-bold text-white mb-3 mt-6">Configuration "Essentiel" (M4 - 16/24 Go)</h3>
+      <h3 class="text-xl font-bold text-white mb-3 mt-6">Vos données restent chez vous</h3>
       <ul class="list-disc list-inside space-y-2 mb-4 text-slate-300">
-        <li><strong>Pour qui ?</strong> : Indépendants, secrétariat, administratif.</li>
-        <li><strong>Capacités</strong> : Faire tourner des modèles de 7B à 14B paramètres (très rapides).</li>
-        <li><strong>Usage</strong> : Rédaction d'emails, synthèse de documents, chat simple.</li>
+        <li><strong>Zéro upload</strong> : Aucun fichier n'est envoyé sur des serveurs distants</li>
+        <li><strong>Zéro tracking</strong> : Aucune donnée n'est collectée ou analysée</li>
+        <li><strong>Mode offline</strong> : Fonctionne même sans connexion internet</li>
+        <li><strong>Confidentialité totale</strong> : Vos présentations sensibles restent privées</li>
       </ul>
 
-      <h3 class="text-xl font-bold text-white mb-3 mt-6">Configuration "Pro" (M4 Pro - 32 Go+)</h3>
-      <ul class="list-disc list-inside space-y-2 mb-4 text-slate-300">
-        <li><strong>Pour qui ?</strong> : Développeurs, Analystes financiers, Juristes (gros dossiers).</li>
-        <li><strong>Capacités</strong> : Modèles 32B+, contextes longs (livres entiers).</li>
-        <li><strong>Usage</strong> : Analyse de code, RAG sur base de données massive, automatisation complexe.</li>
-      </ul>
-
-      <p class="mb-4">En tant qu'ingénieur, je valide chaque configuration pour qu'elle corresponde exactement à votre charge de travail, sans surcoût inutile.</p>
+      <p class="mb-4">C'est notre <strong>garantie confidentialité</strong>. Vos données ne quittent jamais votre machine.</p>
     `,
-    keywords: ['Mac Mini M4', 'Hardware IA', 'Configuration Apple', 'M4 Pro', 'Performance IA'],
-    seoTitle: 'Quel Mac Mini pour l\'IA ? Guide M4 vs M4 Pro | SmartUnityIA',
-    seoDescription: 'Guide d\'achat Mac Mini pour l\'IA. M4 pour l\'usage bureautique, M4 Pro pour l\'analyse de données intensive. Choisissez la bonne puissance.',
-    slides: [
-      {
-        image: '/slides/mac-mini/mac-mini-1.jpg',
-        alt: 'Mac Mini M4 - Configuration Essentiel 16 Go RAM pour usage administratif et assistants personnels'
-      },
-      {
-        image: '/slides/mac-mini/mac-mini-2.jpg',
-        alt: 'Mac Mini M4 Pro - Configuration Pro 48 Go RAM pour développeurs et analyse de données'
-      },
-      {
-        image: '/slides/mac-mini/mac-mini-3.jpg',
-        alt: 'Comparaison Mac Mini M4 vs M4 Pro - Capacités et performances pour IA locale'
-      },
-      {
-        image: '/slides/mac-mini/mac-mini-4.jpg',
-        alt: 'Architecture mémoire unifiée Mac Mini - Avantages pour l\'intelligence artificielle'
-      },
-      {
-        image: '/slides/mac-mini/mac-mini-5.jpg',
-        alt: 'Modèles IA supportés par Mac Mini M4 - Mistral 7B, Llama 3, Qwen'
-      },
-      {
-        image: '/slides/mac-mini/mac-mini-6.jpg',
-        alt: 'Modèles IA avancés sur Mac Mini M4 Pro - Modèles 32B+ et contextes longs'
-      },
-      {
-        image: '/slides/mac-mini/mac-mini-7.jpg',
-        alt: 'Installation et configuration Mac Mini pour infrastructure IA Local First'
-      }
-    ]
+    keywords: ['Local First', 'Confidentialité', 'Privacy', 'Offline', 'Sécurité'],
+    seoTitle: 'SmartBookLM : Vos données restent sur votre machine | Local First',
+    seoDescription: 'SmartBookLM fonctionne en mode Local First. Vos données ne quittent jamais votre ordinateur. Confidentialité totale garantie.',
+    slides: []
   },
-
-  // --- NOUVEAU : Services Spécialisés (Apps) ---
   {
-    id: 'applications-sur-mesure',
-    slug: 'applications-ia-sur-mesure',
+    id: 'compatible-windows',
+    slug: 'compatible-windows',
     featured: true,
-    question: "Pouvez-vous créer des applications pour un problème spécifique ?",
-    shortAnswer: "Oui. Au-delà du simple 'Chat', nous développons des interfaces dédiées : tableau de bord financier, trieur de CV pour les RH, ou analyseur de contrats juridiques.",
+    question: "Sur quelles plateformes SmartBookLM sera-t-il disponible ?",
+    shortAnswer: "SmartBookLM sera un site web accessible à tous, depuis n'importe quel appareil : Mac, Windows, Linux, iOS, Android. Aucune installation requise, accessible directement depuis votre navigateur.",
     detailedAnswer: `
-      <p class="mb-4">L'IA ne sert pas qu'à discuter. C'est un moteur de traitement. SmartUnityIA développe des <strong>micro-applications métiers</strong> qui résolvent vos problèmes spécifiques.</p>
+      <p class="mb-4">SmartBookLM sera un <strong>site web accessible à tous</strong>, sans installation ni téléchargement. Une solution universelle qui fonctionne sur tous vos appareils.</p>
       
-      <h3 class="text-xl font-bold text-white mb-3 mt-6">Exemples de réalisations</h3>
+      <h3 class="text-xl font-bold text-white mb-3 mt-6">Accessible depuis n'importe quel appareil</h3>
+      <p class="mb-4">SmartBookLM sera accessible depuis :</p>
       <ul class="list-disc list-inside space-y-2 mb-4 text-slate-300">
-        <li><strong>Finance</strong> : Une app qui "scanne" vos factures PDF et remplit automatiquement votre fichier Excel de comptabilité.</li>
-        <li><strong>RH</strong> : Un outil qui lit 500 CV et sort le top 10 correspondant à votre fiche de poste.</li>
-        <li><strong>Immobilier</strong> : Un générateur d'annonces optimisées à partir de vos photos et caractéristiques techniques.</li>
+        <li><strong>Ordinateurs</strong> : Mac, Windows, Linux - via votre navigateur web</li>
+        <li><strong>Smartphones</strong> : iOS et Android - interface mobile optimisée</li>
+        <li><strong>Tablettes</strong> : iPad, Android tablets - expérience tactile adaptée</li>
+        <li><strong>Tous les navigateurs</strong> : Chrome, Safari, Firefox, Edge</li>
       </ul>
 
-      <p class="mb-4">Nous ne vous vendons pas une boîte vide, mais une <strong>solution configurée</strong> pour votre métier.</p>
+      <h3 class="text-xl font-bold text-white mb-3 mt-6">Aucune installation requise</h3>
+      <p class="mb-4">Comme c'est un <strong>site web</strong>, vous n'avez besoin d'installer aucune application. Ouvrez simplement votre navigateur, connectez-vous, et commencez à utiliser SmartBookLM immédiatement.</p>
+      
+      <p class="mb-4">Que vous soyez sur Mac, Windows, Linux, iPhone, Android ou tablette, SmartBookLM sera accessible partout. <strong>Inscrivez-vous à la waitlist</strong> pour être notifié dès le lancement.</p>
     `,
-    keywords: ['Développement IA', 'Applications sur mesure', 'Outils métiers', 'Finance', 'RH'],
-    seoTitle: 'Applications IA sur mesure pour entreprises | SmartUnityIA',
-    seoDescription: 'Développement d\'applications IA métiers : Finance, RH, Juridique. Résolvez vos problèmes spécifiques avec des outils sur mesure.',
-    slides: [
-      {
-        image: '/slides/applications/applications-1.jpg',
-        alt: 'Tableau de bord financier IA - Analyse automatique de factures PDF et remplissage Excel'
-      },
-      {
-        image: '/slides/applications/applications-2.jpg',
-        alt: 'Trieur de CV IA pour RH - Analyse de 500 CV et sélection du top 10 correspondant'
-      },
-      {
-        image: '/slides/applications/applications-3.jpg',
-        alt: 'Analyseur de contrats juridiques IA - Extraction et analyse de clauses contractuelles'
-      },
-      {
-        image: '/slides/applications/applications-4.jpg',
-        alt: 'Générateur d\'annonces immobilières IA - Création optimisée à partir de photos et caractéristiques'
-      },
-      {
-        image: '/slides/applications/applications-5.jpg',
-        alt: 'Interface micro-application métier IA - Développement sur mesure pour secteurs spécifiques'
-      },
-      {
-        image: '/slides/applications/applications-6.jpg',
-        alt: 'Architecture applications IA sur mesure - Solutions configurées pour votre métier'
-      }
-    ]
+    keywords: ['Site web', 'Web app', 'Accessible', 'Multi-plateforme', 'Navigateur', 'Sans installation'],
+    seoTitle: 'SmartBookLM : Site web accessible partout | Mac, Windows, Linux, Mobile | SmartBookLM',
+    seoDescription: 'SmartBookLM sera un site web accessible à tous, depuis n\'importe quel appareil. Aucune installation requise, accessible directement depuis votre navigateur.',
+    slides: []
   },
-
-  // --- NOUVEAU : Automatisations ---
   {
-    id: 'automatisation-processus',
-    slug: 'automatisation-taches-ia',
+    id: 'difference-notebooklm',
+    slug: 'difference-avec-notebooklm',
     featured: true,
-    question: "L'IA peut-elle automatiser mes tâches répétitives ?",
-    shortAnswer: "C'est sa plus grande force. Nous connectons l'IA à vos fichiers et logiciels via des scripts Python pour qu'elle travaille en arrière-plan : lecture de mails, extraction de données, reporting.",
+    question: "J'ai déjà NotebookLM, à quoi ça sert ?",
+    shortAnswer: "SmartBookLM permet de passer d'une présentation signée NotebookLM à une présentation sans filigrane avec une rapidité hors norme. Parfait pour les créateurs de contenu éducatifs ou professionnels.",
     detailedAnswer: `
-      <p class="mb-4">Ne perdez plus de temps à faire des copier-coller. Nous configurons des <strong>agents d'automatisation</strong> qui travaillent pour vous 24/7 sur votre Mac Mini.</p>
+      <p class="mb-4">Vous utilisez NotebookLM pour créer vos présentations, mais elles sont <strong>marquées du filigrane NotebookLM</strong> ? SmartBookLM résout ce problème en un instant.</p>
       
-      <h3 class="text-xl font-bold text-white mb-3 mt-6">L'Automatisation "Local First"</h3>
+      <h3 class="text-xl font-bold text-white mb-3 mt-6">De la présentation signée à la présentation propre</h3>
+      <p class="mb-4">SmartBookLM transforme vos exports NotebookLM :</p>
       <ul class="list-disc list-inside space-y-2 mb-4 text-slate-300">
-        <li><strong>Traitement de fichiers</strong> : L'IA ouvre vos dossiers, lit les nouveaux fichiers et agit dessus.</li>
-        <li><strong>Connexion API</strong> : (Optionnel) Liaison avec votre CRM ou vos outils internes.</li>
-        <li><strong>Scripts Python</strong> : Des programmes robustes et audités qui exécutent les actions (envoi de mail, création de PDF).</li>
+        <li><strong>Import</strong> : Glissez votre présentation signée NotebookLM</li>
+        <li><strong>Suppression automatique</strong> : Le filigrane est retiré instantanément sur toutes les slides</li>
+        <li><strong>Export propre</strong> : Récupérez votre présentation sans filigrane en quelques secondes</li>
       </ul>
 
-      <p class="mb-4">Le but est de libérer vos équipes des tâches à faible valeur ajoutée pour qu'elles se concentrent sur l'essentiel.</p>
-    `,
-    keywords: ['Automatisation IA', 'Python', 'Productivité', 'Agents autonomes', 'Workflow'],
-    seoTitle: 'Automatisation des tâches par l\'IA | SmartUnityIA',
-    seoDescription: 'Automatisez vos processus métiers avec l\'IA et Python. Traitement de fichiers, emails, reporting. Gain de productivité immédiat.',
-    slides: [
-      {
-        image: '/slides/auto/auto-1.jpg',
-        alt: 'Agents autonomes IA'
-      },
-      {
-        image: '/slides/auto/auto-2.jpg',
-        alt: 'Opérationnel 24/7'
-      },
-      {
-        image: '/slides/auto/auto-3.jpg',
-        alt: 'Alliance IA Python'
-      },
-      {
-        image: '/slides/auto/auto-4.jpg',
-        alt: 'Zéro erreur humaine'
-      },
-      {
-        image: '/slides/auto/auto-5.jpg',
-        alt: 'Fin du copier-coller'
-      }
-    ]
-  },
+      <h3 class="text-xl font-bold text-white mb-3 mt-6">Rapidité hors norme</h3>
+      <p class="mb-4">Ce qui prendrait <strong>des heures de travail manuel</strong> se fait maintenant en <strong>moins de 10 secondes</strong>. SmartBookLM automatise la suppression du filigrane sur l'ensemble de votre diaporama d'un seul coup.</p>
 
-  // --- NOUVEAU : Cause Animale (Info Mémoire) ---
-  {
-    id: 'cause-animale',
-    slug: 'soutien-cause-animale',
-    featured: true,
-    question: "Quelles associations pour la cause animale soutenez-vous ?",
-    shortAnswer: "C'est vous qui décidez. Pour chaque Mac Mini vendu, nous reversons 100€ à l'une de nos 3 associations partenaires (Santé, Refuge ou Faune Sauvage). Vous validez votre choix lors de la commande.",
-    detailedAnswer: `
-      <p class="mb-4">Chez SmartUnityIA, la technologie doit servir le vivant. C'est pourquoi l'engagement éthique est intégré directement dans notre modèle économique, pas en option.</p>
-      
-      <h3 class="text-xl font-bold text-white mb-3 mt-6">Un engagement concret : 100€ par vente</h3>
-      <p class="mb-4">Sur chaque configuration vendue, nous prélevons 100€ sur notre marge. Au moment de valider votre projet, <strong>vous choisissez</strong> à laquelle de ces trois causes le don sera versé :</p>
-      
+      <h3 class="text-xl font-bold text-white mb-3 mt-6">Parfait pour les créateurs de contenu</h3>
+      <p class="mb-4">SmartBookLM est idéal pour :</p>
       <ul class="list-disc list-inside space-y-2 mb-4 text-slate-300">
-        <li><strong>Santé Vétérinaire</strong> : Aide aux soins pour les animaux des personnes démunies ou financement de matériel médical.</li>
-        <li><strong>Refuges & Adoptions</strong> : Soutien aux structures qui accueillent les animaux abandonnés (nourriture, chauffage, soins).</li>
-        <li><strong>Faune Sauvage & Biodiversité</strong> : Protection des habitats naturels et centres de soins pour la faune sauvage.</li>
+        <li><strong>Créateurs de contenu éducatifs</strong> : Formateurs, enseignants, coachs qui partagent leurs présentations</li>
+        <li><strong>Professionnels</strong> : Consultants, formateurs en entreprise, conférenciers</li>
+        <li><strong>Content creators</strong> : Créateurs qui utilisent NotebookLM pour leurs vidéos et formations</li>
+        <li><strong>Tous ceux qui veulent</strong> : Présenter leurs slides sans le filigrane NotebookLM</li>
       </ul>
-  <p class="mb-4">Les versements sont effectués mensuellement et en toute transparence. En modernisant votre entreprise, vous contribuez directement à un impact positif sur la cause qui vous touche le plus.</p>
-    `,
-    keywords: ['Cause animale', 'Choix client', 'Dons', 'Éthique', 'Protection animale'],
-    seoTitle: 'SmartUnityIA et la Cause Animale | Vous choisissez l\'association',
-    seoDescription: '100€ reversés par Mac Mini vendu. Le client choisit l\'association bénéficiaire parmi 3 causes : Santé vétérinaire, Refuges ou Faune sauvage.',
-    slides: [
-      {
-        image: '/slides/ethique/ethique-1.jpg',
-        alt: 'Éthique non optionnelle'
-      },
-      {
-        image: '/slides/ethique/ethique-2.jpg',
-        alt: '100€ de don inclus'
-      },
-      {
-        image: '/slides/ethique/ethique-3.jpg',
-        alt: 'Choix du client'
-      },
-      {
-        image: '/slides/ethique/ethique-4.jpg',
-        alt: 'Sélecteur de cause'
-      },
-      {
-        image: '/slides/ethique/ethique-5.jpg',
-        alt: 'Transparence des versements'
-      },
-      {
-        image: '/slides/ethique/ethique-6.jpg',
-        alt: 'Engagement vivant'
-      }
-    ]
-  },
 
-  // --- EXISTANT : Sécurité & Données (Gardé et Poli) ---
-  {
-    id: 'securite-local-first',
-    slug: 'securite-ia-local-first',
-    featured: true,
-    question: "Pourquoi l'IA 'Local First' est-elle plus sécurisée que le Cloud ?",
-    shortAnswer: "Parce que vos données ne sortent jamais de votre Mac Mini. Aucune fuite possible vers des serveurs étrangers ou utilisation pour entraîner des modèles tiers.",
-    detailedAnswer: `
-      <p class="mb-4">Dans une architecture Cloud classique, vos données sensibles transitent par internet vers des serveurs souvent basés aux US. Avec SmartUnityIA, l'IA est chez vous.</p>
-      <ul class="list-disc list-inside space-y-2 mb-4 text-slate-300">
-        <li><strong>Zéro Fuite</strong> : Le câble internet débranché, l'IA fonctionne toujours.</li>
-        <li><strong>Confidentialité</strong> : Vos données ne servent jamais à entraîner les modèles publics.</li>
-        <li><strong>Souveraineté</strong> : Vous possédez la machine et les données.</li>
-      </ul>
+      <p class="mb-4"><strong>Workflow simple</strong> : Créez votre présentation dans NotebookLM → Exportez → Importez dans SmartBookLM → Récupérez sans filigrane en quelques secondes.</p>
     `,
-    keywords: ['Sécurité', 'Local First', 'Confidentialité', 'Air-Gapped'],
-    seoTitle: 'Pourquoi l\'IA Local First est plus sécurisée ? | SmartUnityIA',
-    seoDescription: 'Sécurité maximale avec l\'IA Local First. Vos données restent sur votre Mac Mini. Aucune fuite vers le Cloud.',
-    slides: [
-      {
-        image: '/slides/securite/secu-1.jpg',
-        alt: 'Localisation des données'
-      },
-      {
-        image: '/slides/securite/secu-2.jpg',
-        alt: 'Cloud vs Local'
-      },
-      {
-        image: '/slides/securite/secu-3.jpg',
-        alt: 'Stockage physique bureau'
-      },
-      {
-        image: '/slides/securite/secu-4.jpg',
-        alt: 'Zéro fuite mathématique'
-      },
-      {
-        image: '/slides/securite/secu-5.jpg',
-        alt: 'Impossible intercepter'
-      },
-      {
-        image: '/slides/securite/secu-6.jpg',
-        alt: 'Propriétaire total'
-      },
-      {
-        image: '/slides/securite/secu-7.jpg',
-        alt: 'Indépendance service'
-      }
-    ]
-  },
-  
-  {
-    id: 'ia-offline',
-    slug: 'ia-locale-fonctionne-sans-internet',
-    featured: false, // Accessible via les détails
-    question: "L'IA locale fonctionne-t-elle sans internet ?",
-    shortAnswer: "Oui, totalement. C'est la configuration 'Air-Gapped' ultime pour les données ultra-sensibles (Médical, Défense, Brevets).",
-    detailedAnswer: `
-      <p class="mb-4">C'est la force du Local First. Une fois installés, les modèles comme Mistral ou Llama n'ont besoin d'aucune connexion pour réfléchir.</p>
-      <ul class="list-disc list-inside space-y-2 mb-4 text-slate-300">
-        <li><strong>Résilience</strong> : Travaillez même en cas de panne réseau mondiale.</li>
-        <li><strong>Mobilité</strong> : Votre IA vous suit en train, en avion ou en zone blanche.</li>
-        <li><strong>Sécurité</strong> : Une machine déconnectée est impossible à pirater à distance.</li>
-      </ul>
-    `,
-    keywords: ['Offline', 'Sans internet', 'Air-Gapped', 'Mobilité'],
-    seoTitle: 'IA sans internet : Comment ça marche ? | SmartUnityIA',
-    seoDescription: 'Fonctionnement hors-ligne de l\'IA locale. Sécurité Air-Gapped et résilience totale pour les entreprises critiques.',
-    slides: [
-      {
-        image: '/slides/offline/offline-1.jpg',
-        alt: 'IA Offline Souveraine'
-      },
-      {
-        image: '/slides/offline/offline-2.jpg',
-        alt: 'Mode Air-Gapped'
-      },
-      {
-        image: '/slides/offline/offline-3.jpg',
-        alt: 'Résilience totale panne'
-      },
-      {
-        image: '/slides/offline/offline-4.jpg',
-        alt: 'Mobilité sécurisée train avion'
-      },
-      {
-        image: '/slides/offline/offline-5.jpg',
-        alt: 'Avantage stratégique immunité'
-      }
-    ]
+    keywords: ['NotebookLM', 'Suppression filigrane', 'Créateurs de contenu', 'Éducatif', 'Professionnel', 'Rapidité'],
+    seoTitle: 'SmartBookLM : Suppression filigrane NotebookLM rapide | Créateurs de contenu | SmartBookLM',
+    seoDescription: 'Passez d\'une présentation signée NotebookLM à une présentation sans filigrane avec une rapidité hors norme. Parfait pour les créateurs de contenu éducatifs ou professionnels.',
+    slides: []
   }
 ];

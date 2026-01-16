@@ -1,171 +1,80 @@
 <template>
-  <nav
-    :class="[
-      'fixed w-full z-50 transition-all duration-300',
-      isScrolled
-        ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800 py-3'
-        : 'bg-transparent py-5'
-    ]"
-  >
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-      <div class="flex items-center gap-2 font-bold text-xl tracking-tighter text-white">
-        <img :src="logoSrc" alt="SmartUnityIA - Logo ingénieur IA spécialisé solutions Local First et agents IA autonomes" class="h-10 w-auto object-contain" />
-        <span class="flex flex-col leading-none ml-2">
-          <span class="font-bold text-xl tracking-tighter text-white">
-            SmartUnity<span class="text-cyan-500">IA</span>
-          </span>
-        </span>
-      </div>
-      <div class="hidden lg:flex flex-1 mx-8 overflow-hidden relative max-w-xl h-8 items-center mask-linear">
-        <div class="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-slate-950 to-transparent z-10"></div>
-        <div class="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-slate-950 to-transparent z-10"></div>
-        
-        <div class="flex animate-infinite-scroll hover:pause whitespace-nowrap">
-          <div class="flex items-center gap-6 mx-4">
-            <span v-for="(word, index) in techWords" :key="index" class="flex items-center gap-2 text-[10px] font-mono font-bold tracking-widest uppercase text-slate-500">
-              <span class="w-1 h-1 rounded-full bg-cyan-500/40"></span>
-              {{ word }}
-            </span>
-          </div>
-          <div class="flex items-center gap-6 mx-4">
-            <span v-for="(word, index) in techWords" :key="'copy-' + index" class="flex items-center gap-2 text-[10px] font-mono font-bold tracking-widest uppercase text-slate-500">
-              <span class="w-1 h-1 rounded-full bg-cyan-500/40"></span>
-              {{ word }}
-            </span>
-          </div>
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" :class="[isScrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800' : 'bg-transparent']">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="text-2xl font-black tracking-tighter text-white flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center">
+          <span class="text-slate-900 font-bold text-lg">S</span>
         </div>
+        SmartBook<span class="text-yellow-500">LM</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Fonctionnalités</a>
+        <a href="#pricing" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Tarifs</a>
+        <a href="#faq" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">FAQ</a>
       </div>
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <button
-          @click="scrollToSection('expertise')"
-          class="hover:text-cyan-400 transition-colors"
-        >
-          Expertise
+
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Réseaux sociaux -->
+        <div class="flex items-center gap-3">
+          <a 
+            href="https://www.linkedin.com/in/smartunityia-gabin-lemaitre-7b39a5354/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-slate-400 hover:text-yellow-400 transition-colors p-2 rounded-lg hover:bg-white/5"
+            aria-label="LinkedIn"
+          >
+            <Linkedin class="w-5 h-5" />
+          </a>
+          <a 
+            href="https://www.instagram.com/smartunityia/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-slate-400 hover:text-yellow-400 transition-colors p-2 rounded-lg hover:bg-white/5"
+            aria-label="Instagram"
+          >
+            <Instagram class="w-5 h-5" />
+          </a>
+          <a 
+            href="https://www.tiktok.com/@smartunityia" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-slate-400 hover:text-yellow-400 transition-colors p-2 rounded-lg hover:bg-white/5"
+            aria-label="TikTok"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+            </svg>
+          </a>
+        </div>
+        
+        <button @click="scrollToWaitlist" class="bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all border border-white/10 backdrop-blur-sm">
+          donne ton avis
         </button>
-        <button
-          @click="scrollToSection('roi')"
-          class="hover:text-cyan-400 transition-colors"
-        >
-          Rentabilité
-        </button>
-        <button
-          @click="scrollToSection('pricing')"
-          class="hover:text-cyan-400 transition-colors"
-        >
-          Offres
-        </button>
-        <button
-          @click="scrollToSection('faq')"
-          class="hover:text-cyan-400 transition-colors"
-        >
-          FAQ
-        </button>
-        <CallButton @click="openCal" class="px-4 py-2 text-sm font-bold flex items-center gap-2">
-          <Calendar class="w-4 h-4" />
-          Réserver un appel
-        </CallButton>
       </div>
-      <button
-        class="md:hidden text-white"
-        @click="mobileMenuOpen = !mobileMenuOpen"
-      >
-        <X v-if="mobileMenuOpen" />
-        <Menu v-else />
+
+      <button class="md:hidden text-white">
+        <span class="sr-only">Menu</span>
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </button>
-    </div>
-    <div
-      v-if="mobileMenuOpen"
-      class="md:hidden absolute top-full left-0 w-full bg-slate-950 border-b border-slate-800 p-6 flex flex-col gap-4 shadow-2xl"
-    >
-      <button
-        @click="scrollToSection('expertise')"
-        class="text-left py-2 hover:text-cyan-400"
-      >
-        Expertise
-      </button>
-      <button
-        @click="scrollToSection('pricing')"
-        class="text-left py-2 hover:text-cyan-400"
-      >
-        Offres
-      </button>
-      <button
-        @click="scrollToSection('faq')"
-        class="text-left py-2 hover:text-cyan-400"
-      >
-        FAQ
-      </button>
-      <CallButton @click="openCal" class="w-full justify-center flex items-center gap-2">
-        <Calendar class="w-4 h-4" />
-        Réserver un appel
-      </CallButton>
     </div>
   </nav>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
-import { nextTick } from 'vue'
-import { Menu, X, Calendar } from 'lucide-vue-next'
-import { useScroll } from '@/composables/useScroll'
-import CallButton from '@/components/ui/CallButton.vue'
+import { ref, onMounted, onUnmounted } from 'vue'
+import { Linkedin, Instagram } from 'lucide-vue-next'
 
-const router = useRouter()
-const route = useRoute()
-const { isScrolled } = useScroll()
-const mobileMenuOpen = ref(false)
+const isScrolled = ref(false)
 
-// Référence à l'image dans /public - les fichiers dans /public sont servis à la racine
-const logoSrc = '/logo.png'
-
-const techWords = [
-  'LOCAL-FIRST', 'SÉCURISÉ', 'SCALABLE', 'PERSONNALISABLE', 
-  'ECO-RESPONSABLE', 'RGPD', 'SOUVERAINETÉ', 'NO-LOG', 
-  'CHIFFREMENT MILITAIRE', 'OFFLINE-READY'
-]
-
-const scrollToSection = async (id) => {
-  mobileMenuOpen.value = false
-  
-  // Si on n'est pas sur la page d'accueil, naviguer vers l'accueil d'abord
-  if (route.path !== '/') {
-    await router.push('/')
-    // Attendre que la page soit chargée avant de scroller
-    await nextTick()
-    // Petit délai supplémentaire pour s'assurer que le DOM est prêt
-    setTimeout(() => {
-      const element = document.getElementById(id)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    }, 100)
-  } else {
-    // Si on est déjà sur l'accueil, scroller directement
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+const checkScroll = () => {
+  isScrolled.value = window.scrollY > 20
 }
 
-const openCal = () => {
-  window.open('https://app.cal.eu/smartunityia/30min', '_blank')
+const scrollToWaitlist = () => {
+  document.getElementById('lead-magnet')?.scrollIntoView({ behavior: 'smooth' })
 }
 
-defineExpose({
-  scrollToSection,
-  openCal,
-})
+onMounted(() => window.addEventListener('scroll', checkScroll))
+onUnmounted(() => window.removeEventListener('scroll', checkScroll))
 </script>
-
-<style scoped>
-.mask-linear {
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.hover\:pause:hover {
-  animation-play-state: paused;
-}
-</style>

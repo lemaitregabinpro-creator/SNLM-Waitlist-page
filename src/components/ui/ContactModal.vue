@@ -32,7 +32,7 @@
                   type="email" 
                   name="email" 
                   required
-                  class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                  class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-all"
                   placeholder="nom@entreprise.com"
                 />
               </div>
@@ -43,7 +43,7 @@
                   v-model="form.phone"
                   type="tel" 
                   name="phone" 
-                  class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all"
+                  class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-all"
                   placeholder="06 12 34 56 78"
                 />
               </div>
@@ -55,7 +55,7 @@
                   name="message" 
                   rows="4" 
                   required
-                  class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all resize-none"
+                  class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-yellow-500 focus:border-transparent outline-none transition-all resize-none"
                   placeholder="Bonjour Gabin, j'aimerais discuter de..."
                 ></textarea>
               </div>
@@ -84,6 +84,7 @@
   import { ref, reactive } from 'vue'
   import { X, Send, Check } from 'lucide-vue-next'
   import CallButton from '@/components/ui/CallButton.vue'
+  import { userPreferences } from '@/composables/useUserPreferences'
   
   defineProps({
     isOpen: Boolean
@@ -102,14 +103,22 @@
   const handleSubmit = async () => {
     isLoading.value = true
     
+    // Préparation des données complètes
+    const formData = {
+      ...form,
+      // On ajoute les préférences en JSON stringifié pour que ce soit lisible dans l'email Formspree
+      preferences_pricing: JSON.stringify(userPreferences.pricing, null, 2),
+      preferences_features: JSON.stringify(userPreferences.features, null, 2)
+    }
+    
     try {
-      const response = await fetch("https://formspree.io/f/xbddrjaw", {
+      const response = await fetch("https://formspree.io/f/xkooondd", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(form)
+        body: JSON.stringify(formData)
       })
   
       if (response.ok) {

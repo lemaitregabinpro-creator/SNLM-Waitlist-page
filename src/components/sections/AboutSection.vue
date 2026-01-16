@@ -4,7 +4,7 @@
       <div class="relative w-32 h-32 mx-auto mb-6 bg-slate-800 rounded-full overflow-hidden border-2 border-gold-500 shadow-lg shadow-gold-500/20 group hover:scale-105 transition-transform">
         <img 
           :src="imageSrc" 
-          alt="Gabin Lemaitre - Ingénieur IA expert en solutions Local First et agents IA autonomes pour finance, santé et juridique" 
+          alt="Gabin Lemaitre - Ingénieur IA expert, créateur de SmartBookLM pour la suppression automatique du filigrane NotebookLM" 
           class="w-full h-full object-cover"
         />
       </div>
@@ -12,17 +12,17 @@
       <p class="text-gold-400 font-mono text-sm mb-8">L'alliance de la puissance brute et de la confidentialité absolue.</p>
       <div class="text-left space-y-6 text-slate-300 leading-relaxed">
         <p class="text-lg">
-          Fondé par Gabin Lemaitre, <strong class="text-white">ingénieur IA</strong> expert, SmartUnityIA est un studio de développement spécialisé dans les <strong class="text-white">solutions IA souveraines</strong> et architectures <strong class="text-white">Local First</strong> pour les secteurs sensibles (finance, santé, juridique).
+          Développé par Gabin Lemaitre, <strong class="text-white">ingénieur IA</strong> expert, SmartBookLM est un outil web conçu pour transformer vos exports NotebookLM en <strong class="text-white">présentations professionnelles</strong> avec une <strong class="text-white">rapidité hors norme</strong>. Supprimez le filigrane NotebookLM sur toutes vos slides en quelques secondes.
         </p>
         <p class="text-lg">
-          Nous refusons le compromis entre performance et sécurité. C'est pourquoi nous développons des <strong class="text-white">agents IA autonomes</strong> et solutions hybrides : des 'Private Brains' installés physiquement chez vous (Mac Mini/GPU) pour la <strong class="text-white">protection des données sensibles</strong>, couplés à des <strong class="text-white">API françaises</strong> (Mistral) ou suisses (Euria) pour la puissance éco-responsable. Chaque Mac Mini configuré génère un don de 100€ à la santé animale.
+          Nous refusons le compromis entre performance et confidentialité. C'est pourquoi SmartBookLM fonctionne en <strong class="text-white">mode Local First</strong> : tous les traitements se font directement sur votre machine, <strong class="text-white">aucune donnée ne quitte votre ordinateur</strong>. Vos présentations sensibles restent privées, sans upload vers des serveurs distants.
         </p>
         <p class="text-lg">
-          Notre mission : doter les entreprises françaises (<strong class="text-white">IA pour la finance</strong>, <strong class="text-white">IA pour la santé</strong>, <strong class="text-white">conformité juridique</strong>) d'une <strong class="text-white">IA sécurisée</strong> qui leur appartient, sans jamais céder leurs données aux géants américains.
+          Notre mission : offrir aux <strong class="text-white">créateurs de contenu éducatifs</strong> et <strong class="text-white">professionnels</strong> un outil qui automatise la suppression du filigrane NotebookLM, leur faisant gagner des heures de travail tout en préservant leur <strong class="text-white">confidentialité totale</strong>.
         </p>
-        <div class="mt-8 p-6 bg-slate-800/50 border border-gold-500/30 rounded-xl">
+        <div class="mt-8 p-6 border border-gold-500/30 rounded-xl">
           <p class="text-lg text-slate-300">
-            <span class="text-gold-400 font-bold">💚 Engagement Éthique :</span> Pour chaque Mac Mini configuré et vendu, nous reversons <strong class="text-white">100€ à la santé animale</strong>. L'innovation technologique au service du bien-être animal.
+            <span class="text-gold-400 font-bold">💚 Engagement Éthique :</span> Une partie de chaque abonnement est reversée à la <strong class="text-white">santé animale</strong>. L'innovation technologique au service du bien-être animal.
           </p>
         </div>
       </div>

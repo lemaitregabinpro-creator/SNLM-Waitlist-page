@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30 select-none font-mono text-sm md:text-base text-cyan-400/80">
+  <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30 select-none font-mono text-sm md:text-base text-yellow-400/80">
     <div class="p-4 md:p-10 space-y-2">
       <div v-for="(line, idx) in lines" :key="idx" class="typing-line">
         {{ line }}

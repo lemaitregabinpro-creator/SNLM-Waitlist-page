@@ -1,17 +1,17 @@
 <template>
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <!-- Élément Gauche -->
+    <!-- Élément Haut Droite -->
     <img 
       src="/effect/logo.png" 
       alt="Element décoratif IA" 
-      class="absolute -top-20 -left-20 md:top-1/4 md:-left-24 w-64 h-64 md:w-96 md:h-96 object-contain opacity-20 blur-sm animate-spin-slow"
+      class="absolute -top-20 -right-20 md:top-1.5/4 md:-right-24 w-64 h-64 md:w-96 md:h-96 object-contain opacity-20 blur-sm animate-spin-slow"
     />
     
-    <!-- Élément Droite -->
+    <!-- Élément Bas Gauche -->
     <img 
       src="/effect/logo.png" 
       alt="Element décoratif IA" 
-      class="absolute -bottom-20 -right-20 md:bottom-1/4 md:-right-24 w-64 h-64 md:w-96 md:h-96 object-contain opacity-20 blur-sm animate-spin-reverse-slow"
+      class="absolute -bottom-20 -left-20 md:bottom-1.5/4 md:-left-24 w-64 h-64 md:w-96 md:h-96 object-contain opacity-20 blur-sm animate-spin-reverse-slow"
     />
   </div>
 </template>

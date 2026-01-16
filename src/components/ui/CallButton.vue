@@ -13,7 +13,7 @@ const attrs = useAttrs()
 
 <template>
   <button class="btn-shine" :type="props.type" v-bind="attrs">
-    <span><slot>Réserver un appel</slot></span>
+    <span><slot>Remplir le formulaire d'avis</slot></span>
   </button>
 </template>
 

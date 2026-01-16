@@ -8,8 +8,8 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: 'Ingénieur IA Local First | Solutions IA Souveraines',
-      description: 'Ingénieur IA spécialisé en solutions Local First pour finance, santé, juridique. Agents IA autonomes sécurisés, API françaises, protection données sensibles.'
+      title: 'SmartBookLM - Suppression automatique du filigrane NotebookLM',
+      description: 'SmartBookLM : Supprimez automatiquement le filigrane NotebookLM sur toutes vos slides en quelques secondes. Mode Local First, confidentialité garantie.'
     }
   },
   {
@@ -18,8 +18,8 @@ const routes = [
     component: FaqDetail,
     props: true,
     meta: {
-      title: 'FAQ - SmartUnityIA',
-      description: 'Questions fréquentes sur nos solutions IA souveraines et Local First.'
+      title: 'FAQ - SmartBookLM',
+      description: 'Questions fréquentes sur SmartBookLM : suppression automatique du filigrane NotebookLM, mode Local First, compatibilité et workflow.'
     }
   }
 ]

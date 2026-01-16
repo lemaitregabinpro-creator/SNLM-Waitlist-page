@@ -1,13 +1,13 @@
 <template>
   <div class="border-b border-slate-800 last:border-0">
     <button
-      class="w-full py-5 flex justify-between items-center text-left hover:text-cyan-400 transition-colors group"
+      class="w-full py-5 flex justify-between items-center text-left hover:text-yellow-400 transition-colors group"
       @click="isOpen = !isOpen"
     >
       <span class="font-medium text-lg text-slate-200 group-hover:pl-2 transition-all">
         {{ question }}
       </span>
-      <ChevronUp v-if="isOpen" class="text-cyan-500" />
+      <ChevronUp v-if="isOpen" class="text-yellow-500" />
       <ChevronDown v-else class="text-slate-500" />
     </button>
     <div

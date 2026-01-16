@@ -2,7 +2,7 @@
   <div class="mb-6">
     <div class="flex justify-between items-center mb-2">
       <label class="text-slate-300 font-medium text-sm">{{ label }}</label>
-      <span class="text-cyan-400 font-mono font-bold">
+      <span class="text-yellow-400 font-mono font-bold">
         {{ value }} <span class="text-slate-500 text-xs">{{ unit }}</span>
       </span>
     </div>
@@ -13,7 +13,7 @@
       :step="step"
       :value="value"
       @input="handleInput"
-      class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-500 hover:accent-cyan-400 transition-all focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+      class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-yellow-500 hover:accent-yellow-400 transition-all focus:outline-none focus:ring-2 focus:ring-yellow-500/50"
     />
   </div>
 </template>

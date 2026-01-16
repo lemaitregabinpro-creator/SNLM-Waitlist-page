@@ -65,6 +65,7 @@ export default {
       },
       animation: {
         'scroll': 'scroll 20s linear infinite',
+        'scroll-slow': 'scroll 40s linear infinite',
         'fade-in': 'fadeIn 0.5s ease-out forwards',
         'text-gradient': 'text-gradient 8s linear infinite',
         'tilt': 'tilt 10s infinite linear',

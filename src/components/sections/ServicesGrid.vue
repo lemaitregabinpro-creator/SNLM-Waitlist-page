@@ -2,41 +2,23 @@
   <section id="services" class="py-12 md:py-24 px-6">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-12 md:mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 break-words">Solutions IA Souveraines & Agents IA Autonomes</h2>
-        <p class="text-slate-400 break-words">Ingénieur IA et développeur IA spécialisé en Local First pour finance, santé, juridique.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 break-words">Workflow Intelligent</h2>
+        <p class="text-slate-400 break-words">De l'import brut à l'export professionnel, en quelques clics.</p>
       </div>
+      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <FadeInSection delay="0ms">
-          <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-gold-500/50 transition-all duration-300 group h-full">
-            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/10 transition-colors">
-              <Server class="text-cyan-400 w-6 h-6" />
+        <FadeInSection v-for="(service, index) in services" :key="index" :delay="`${index * 100}ms`">
+          <div class="border border-slate-800 p-6 rounded-xl hover:border-yellow-500/50 transition-all duration-300 group h-full flex flex-col">
+            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-yellow-500/10 transition-colors">
+              <component :is="service.icon" class="text-yellow-400 w-6 h-6" />
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">RAG & IA Locale Sécurisée</h3>
-            <p class="text-slate-400 mb-4 text-sm">
-              <strong class="text-white">IA sécurisée</strong> : chattez avec vos documents sensibles (PDF, Excel, Notion) en local. <strong class="text-white">Protection des données</strong> garantie, zéro data dans le cloud. Idéal pour <strong class="text-white">IA pour la finance</strong> et <strong class="text-white">IA pour la santé</strong>.
+            <h3 class="text-xl font-bold text-white mb-2">{{ service.title }}</h3>
+            <p class="text-slate-400 mb-4 text-sm flex-grow">
+              <span v-html="service.description"></span>
             </p>
-          </div>
-        </FadeInSection>
-        <FadeInSection delay="100ms">
-          <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-gold-500/50 transition-all duration-300 group h-full">
-            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/10 transition-colors">
-              <MessageSquare class="text-cyan-400 w-6 h-6" />
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">Agents IA Autonomes avec API Françaises</h3>
-            <p class="text-slate-400 mb-4 text-sm">
-              Déploiement d'<strong class="text-white">agents IA autonomes</strong> avec <strong class="text-white">API françaises</strong> (Mistral) dans un environnement isolé <strong class="text-white">Local First</strong> pour vos équipes. <strong class="text-white">Conformité juridique</strong> assurée.
-            </p>
-          </div>
-        </FadeInSection>
-        <FadeInSection delay="200ms">
-          <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:border-gold-500/50 transition-all duration-300 group h-full">
-            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyan-500/10 transition-colors">
-              <Terminal class="text-cyan-400 w-6 h-6" />
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">SaaS & Apps Custom</h3>
-            <p class="text-slate-400 mb-4 text-sm">
-              Développement complet d'interfaces web modernes et réactives (Vue.js, Tailwind CSS, Python).
-            </p>
+            
+            <PreferenceFeedback category="features" :item-id="service.title" />
+            
           </div>
         </FadeInSection>
       </div>
@@ -45,6 +27,40 @@
 </template>
 
 <script setup>
-import { Server, MessageSquare, Terminal } from 'lucide-vue-next'
+import { Upload, Sparkles, WifiOff, FileText, Layout, Rocket } from 'lucide-vue-next'
 import FadeInSection from '@/components/ui/FadeInSection.vue'
+import PreferenceFeedback from '@/components/ui/PreferenceFeedback.vue'
+
+const services = [
+  {
+    icon: Upload,
+    title: "Import Universel",
+    description: "Glissez vos fichiers bruts ou exports <strong class='text-white'>NotebookLM</strong>. SmartBookLM reconnaît automatiquement les formats."
+  },
+  {
+    icon: Sparkles,
+    title: "Nettoyage Visuel",
+    description: "L'IA supprime les artifacts. Notre moteur <strong class='text-white'>'Magic Clean'</strong> transforme le bruit visuel en clarté absolue."
+  },
+  {
+    icon: WifiOff,
+    title: "Mode Déconnecté",
+    description: "Travaillez dans le train ou l'avion. Aucune connexion requise, <strong class='text-white'>confidentialité garantie</strong>."
+  },
+  {
+    icon: FileText,
+    title: "Export Haute Fidélité",
+    description: "Exportez en <strong class='text-white'>PNG, JPEG ou WebP</strong>. Qualité optimale pour le web et les réseaux."
+  },
+  {
+    icon: Layout,
+    title: "Smart Layouts",
+    description: "Chaque slide devient une image indépendante. Téléchargez le diaporama complet ou une sélection."
+  },
+  {
+    icon: Rocket,
+    title: "Mises à jour à vie",
+    description: "Une roadmap active. Les <strong class='text-white'>Pionniers</strong> bénéficient de toutes les futures mises à jour v1.x."
+  }
+]
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 font-mono text-sm shadow-2xl max-w-md mx-auto transform -rotate-1 hover:rotate-0 transition-transform duration-500 hover:shadow-cyan-500/10 hover:border-cyan-500/30">
+  <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 font-mono text-sm shadow-2xl max-w-md mx-auto transform -rotate-1 hover:rotate-0 transition-transform duration-500 hover:shadow-yellow-500/10 hover:border-yellow-500/30">
     <div class="flex items-center gap-2 mb-4 border-b border-slate-800 pb-2">
       <div class="w-3 h-3 rounded-full bg-red-500"></div>
       <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -22,7 +22,7 @@
               ? 'bg-slate-800 text-slate-200'
               : msg.role === 'system'
               ? 'text-yellow-500 text-xs italic'
-              : 'bg-cyan-900/20 text-cyan-200 border border-cyan-900/50'
+              : 'bg-yellow-900/20 text-yellow-200 border border-yellow-900/50'
           ]"
         >
           {{ msg.text }}

@@ -4,9 +4,9 @@
     
     <div v-if="faq" class="max-w-4xl mx-auto px-6 py-12 md:py-20">
       <nav class="mb-6 md:mb-8 text-xs md:text-sm text-slate-400 break-words">
-        <router-link to="/" class="hover:text-cyan-400 transition-colors">Accueil</router-link>
+        <router-link to="/" class="hover:text-yellow-400 transition-colors">Accueil</router-link>
         <span class="mx-2">/</span>
-        <router-link to="/#faq" class="hover:text-cyan-400 transition-colors">FAQ</router-link>
+        <router-link to="/#faq" class="hover:text-yellow-400 transition-colors">FAQ</router-link>
         <span class="mx-2">/</span>
         <span class="text-slate-300">{{ faq.question }}</span>
       </nav>
@@ -36,10 +36,10 @@
               <!-- Bouton Agrandir -->
               <button
                 @click="openImageModal(currentSlideIndex)"
-                class="absolute top-2 right-2 md:top-4 md:right-4 bg-slate-900/90 backdrop-blur-sm border border-slate-700 rounded-lg p-1.5 md:p-2 hover:bg-slate-800 hover:border-cyan-500/50 transition-all group"
+                class="absolute top-2 right-2 md:top-4 md:right-4 bg-slate-900/90 backdrop-blur-sm border border-slate-700 rounded-lg p-1.5 md:p-2 hover:bg-slate-800 hover:border-yellow-500/50 transition-all group"
                 aria-label="Agrandir l'image"
               >
-                <ZoomIn class="w-4 h-4 md:w-5 md:h-5 text-slate-300 group-hover:text-cyan-400 transition-colors" />
+                <ZoomIn class="w-4 h-4 md:w-5 md:h-5 text-slate-300 group-hover:text-yellow-400 transition-colors" />
               </button>
             </div>
 
@@ -48,7 +48,7 @@
               <button
                 @click="previousSlide"
                 :disabled="currentSlideIndex === 0"
-                class="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg hover:border-cyan-500/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm md:text-base w-full sm:w-auto justify-center"
+                class="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg hover:border-yellow-500/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm md:text-base w-full sm:w-auto justify-center"
                 :class="currentSlideIndex === 0 ? '' : 'hover:bg-slate-700'"
               >
                 <ChevronLeft class="w-4 h-4 md:w-5 md:h-5 text-slate-300" />
@@ -62,7 +62,7 @@
                   :key="index"
                   @click="currentSlideIndex = index"
                   class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full cursor-pointer transition-all"
-                  :class="currentSlideIndex === index ? 'bg-cyan-500 w-6 md:w-8' : 'bg-slate-600 hover:bg-slate-500'"
+                  :class="currentSlideIndex === index ? 'bg-yellow-500 w-6 md:w-8' : 'bg-slate-600 hover:bg-slate-500'"
                   :aria-label="`Aller à la slide ${index + 1}`"
                 ></span>
               </div>
@@ -70,7 +70,7 @@
               <button
                 @click="nextSlide"
                 :disabled="currentSlideIndex === faq.slides.length - 1"
-                class="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg hover:border-cyan-500/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm md:text-base w-full sm:w-auto justify-center"
+                class="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg hover:border-yellow-500/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm md:text-base w-full sm:w-auto justify-center"
                 :class="currentSlideIndex === faq.slides.length - 1 ? '' : 'hover:bg-slate-700'"
               >
                 <span class="text-xs md:text-sm text-slate-300">Suivant</span>
@@ -100,9 +100,9 @@
             v-for="otherFaq in otherFaqs"
             :key="otherFaq.id"
             :to="`/faq/${otherFaq.slug}`"
-            class="block p-4 bg-slate-900/50 border border-slate-800 rounded-lg hover:border-cyan-500/50 hover:bg-slate-900 transition-all group h-full"
+            class="block p-4 bg-slate-900/50 border border-slate-800 rounded-lg hover:border-yellow-500/50 hover:bg-slate-900 transition-all group h-full"
           >
-            <h4 class="text-white font-medium mb-2 group-hover:text-cyan-400 transition-colors text-sm md:text-base">
+            <h4 class="text-white font-medium mb-2 group-hover:text-yellow-400 transition-colors text-sm md:text-base">
               {{ otherFaq.question }}
             </h4>
             <p class="text-xs text-slate-400 line-clamp-2">
@@ -113,11 +113,11 @@
       </div>
 
       <div class="mt-8 md:mt-16 text-center">
-        <p class="text-slate-400 mb-4 md:mb-6 break-words">Une question spécifique non traitée ?</p>
-        <CallButton @click="openCal" class="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full md:w-auto">
+        <p class="text-slate-400 mb-4 md:mb-6 break-words">Partagez votre avis et aidez-nous à améliorer SmartBookLM</p>
+        <CallButton @click="openFeedbackModal" class="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 w-full md:w-auto">
           <div class="flex items-center justify-center gap-3">
-            <Calendar class="w-5 h-5" />
-            <span>Réserver un appel découverte</span>
+            <FileText class="w-5 h-5" />
+            <span>Remplir le formulaire d'avis</span>
           </div>
         </CallButton>
       </div>
@@ -137,7 +137,7 @@
       <h1 class="text-3xl md:text-4xl font-bold text-white mb-4 break-words">Question non trouvée</h1>
       <router-link 
         to="/#faq" 
-        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 text-slate-900 rounded-lg font-bold hover:bg-cyan-400 transition-colors w-full md:w-auto"
+        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 text-slate-900 rounded-lg font-bold hover:bg-yellow-400 transition-colors w-full md:w-auto"
       >
         <ArrowLeft class="w-4 h-4 md:w-5 md:h-5" />
         <span class="text-sm md:text-base">Retour à la FAQ</span>
@@ -145,6 +145,9 @@
     </div>
 
     <Footer />
+
+    <!-- Modal de formulaire d'avis -->
+    <FeedbackModal :is-open="isFeedbackModalOpen" @close="closeFeedbackModal" />
 
     <!-- Modal Image Fullscreen -->
     <Transition name="modal">
@@ -155,7 +158,7 @@
       >
         <button
           @click="closeImageModal"
-          class="absolute top-4 right-4 bg-slate-900/90 border border-slate-700 rounded-lg p-2 hover:bg-slate-800 hover:border-cyan-500/50 transition-all z-10"
+          class="absolute top-4 right-4 bg-slate-900/90 border border-slate-700 rounded-lg p-2 hover:bg-slate-800 hover:border-yellow-500/50 transition-all z-10"
           aria-label="Fermer"
         >
           <X class="w-6 h-6 text-slate-300 hover:text-white" />
@@ -181,10 +184,10 @@
           <button
             v-if="faq.slides && modalImageIndex < faq.slides.length - 1"
             @click.stop="nextModalImage"
-            class="absolute right-4 bg-slate-900/90 border border-slate-700 rounded-lg p-3 hover:bg-slate-800 hover:border-cyan-500/50 transition-all"
+            class="absolute right-4 bg-slate-900/90 border border-slate-700 rounded-lg p-3 hover:bg-slate-800 hover:border-yellow-500/50 transition-all"
             aria-label="Image suivante"
           >
-            <ChevronRight class="w-6 h-6 text-slate-300 hover:text-cyan-400" />
+            <ChevronRight class="w-6 h-6 text-slate-300 hover:text-yellow-400" />
           </button>
 
           <!-- Compteur modal -->
@@ -206,7 +209,8 @@ import { faqData } from '@/data/faqData'
 import NavBar from '@/components/sections/NavBar.vue'
 import Footer from '@/components/sections/Footer.vue'
 import CallButton from '@/components/ui/CallButton.vue'
-import { Calendar, ArrowLeft, ChevronLeft, ChevronRight, ZoomIn, X } from 'lucide-vue-next'
+import FeedbackModal from '@/components/ui/FeedbackModal.vue'
+import { FileText, ArrowLeft, ChevronLeft, ChevronRight, ZoomIn, X } from 'lucide-vue-next'
 
 const route = useRoute()
 
@@ -220,8 +224,15 @@ const otherFaqs = computed(() => {
   return faqData.filter(f => f.id !== faq.value?.id)
 })
 
-const openCal = () => {
-  window.open('https://app.cal.eu/smartunityia/30min', '_blank')
+// Modal de formulaire d'avis
+const isFeedbackModalOpen = ref(false)
+
+const openFeedbackModal = () => {
+  isFeedbackModalOpen.value = true
+}
+
+const closeFeedbackModal = () => {
+  isFeedbackModalOpen.value = false
 }
 
 // Diaporama
