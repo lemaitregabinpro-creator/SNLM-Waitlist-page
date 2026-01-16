@@ -1,11 +1,16 @@
 <template>
   <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" :class="[isScrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800' : 'bg-transparent']">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="text-2xl font-black tracking-tighter text-white flex items-center gap-2">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center">
-          <span class="text-slate-900 font-bold text-lg">S</span>
-        </div>
-        SmartBook<span class="text-yellow-500">LM</span>
+      <a href="#" class="text-2xl md:text-3xl font-black tracking-tight text-white flex items-center gap-3 group">
+        <img 
+          src="/Logo/Logo.png" 
+          alt="SmartBookLM Logo" 
+          class="h-10 w-auto md:h-12 md:w-auto object-contain brightness-110 drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
+        />
+        <span class="hidden sm:inline">
+          <span class="bg-gradient-to-r from-white via-slate-100 to-white bg-clip-text text-transparent font-extrabold tracking-tight">SmartBook</span>
+          <span class="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent font-extrabold tracking-tight drop-shadow-[0_0_8px_rgba(234,179,8,0.4)]">LM</span>
+        </span>
       </a>
 
       <div class="hidden md:flex items-center gap-8">

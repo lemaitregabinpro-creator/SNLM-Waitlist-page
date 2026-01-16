@@ -14,7 +14,8 @@
       <Footer />
     </div>
     <ContactModal :is-open="isContactOpen" @close="isContactOpen = false" />
-    <FeedbackProgressBar />
+    <FeedbackModal :is-open="isFeedbackModalOpen" @close="closeFeedbackModal" />
+    <FeedbackProgressBar @open-feedback="openFeedbackModal" />
   </div>
 </template>
 
@@ -33,10 +34,23 @@ import Footer from '@/components/sections/Footer.vue'
 import ContactModal from '@/components/ui/ContactModal.vue'
 import FloatingBackgroundElements from '@/components/ui/FloatingBackgroundElements.vue'
 import FeedbackProgressBar from '@/components/ui/FeedbackProgressBar.vue'
+import FeedbackModal from '@/components/ui/FeedbackModal.vue'
 
 const isContactOpen = ref(false)
+const isFeedbackModalOpen = ref(false)
+
 const openContactModal = () => {
   isContactOpen.value = true
 }
+
+const openFeedbackModal = () => {
+  isFeedbackModalOpen.value = true
+}
+
+const closeFeedbackModal = () => {
+  isFeedbackModalOpen.value = false
+}
+
 provide('openContactModal', openContactModal)
+provide('openFeedbackModal', openFeedbackModal)
 </script>

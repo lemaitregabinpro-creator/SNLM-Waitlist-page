@@ -32,17 +32,17 @@
     <div class="mt-8 md:mt-12 text-center">
       <p class="text-slate-400 mb-4 md:mb-6 break-words">Une question non résolue ?</p>
       <button 
-        @click="scrollToContact"
+        @click="openFeedbackModal"
         class="text-base md:text-lg px-6 md:px-8 py-3 md:py-4 bg-yellow-500 hover:bg-yellow-600 text-slate-950 rounded-lg font-bold transition-colors inline-flex items-center gap-3"
       >
-        <span>Nous contacter</span>
+        <span>Remplir le formulaire d'avis</span>
       </button>
     </div>
   </section>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, inject } from 'vue'
 import { faqData } from '@/data/faqData'
 import { ArrowRight } from 'lucide-vue-next'
 
@@ -50,7 +50,8 @@ const featuredFaqs = computed(() => {
   return faqData.filter(faq => faq.featured === true)
 })
 
-const scrollToContact = () => {
-  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-}
+// Récupérer la fonction pour ouvrir le modal de formulaire depuis le parent
+const openFeedbackModal = inject('openFeedbackModal', () => {
+  console.warn('openFeedbackModal not provided')
+})
 </script>

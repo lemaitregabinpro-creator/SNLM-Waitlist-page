@@ -5,7 +5,11 @@
       
       <div class="relative w-full max-w-2xl max-h-[90vh] bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden animate-slide-up flex flex-col">
         
-        <button @click="$emit('close')" class="absolute top-4 right-4 z-10 text-slate-500 hover:text-white transition-colors bg-slate-900 rounded-full p-1">
+        <button 
+          @click.stop="$emit('close')" 
+          class="absolute top-4 right-4 z-50 text-slate-500 hover:text-white transition-colors bg-slate-900 rounded-full p-1.5 hover:bg-slate-800 shadow-lg"
+          aria-label="Fermer"
+        >
           <X class="w-6 h-6" />
         </button>
 
